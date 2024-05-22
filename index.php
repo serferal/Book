@@ -27,11 +27,14 @@ $books = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de Libros</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets\css\body.css">
 </head>
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="index.php">Biblioteca</a>
+
+        <a class="navbar-brand" href="index.php"> <img src="assets\img\lina.png" alt="">
+            Biblioteca</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -55,7 +58,7 @@ $books = $stmt->fetchAll(PDO::FETCH_ASSOC);
         <div class="row">
             <?php foreach ($books as $book) : ?>
                 <div class="col-12 col-md-6 mb-3">
-                    <div class="card">
+                    <div class="card" style="background-color: rgba(255, 255, 255, 0.4);">
                         <div class="card-body">
                             <h5 class="card-title"><?php echo htmlspecialchars($book['Titulo']); ?></h5>
                             <h6 class="card-subtitle mb-2 text-muted"><?php echo htmlspecialchars($book['autor_nombre']); ?></h6>

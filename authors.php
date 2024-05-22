@@ -15,12 +15,14 @@ $autores = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de Autores</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets\css\body.css">
+
 </head>
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="index.php">Biblioteca</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <a class="navbar-brand" href="index.php"> <img src="assets\img\lina.png" alt="">
+            Biblioteca</a> <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
@@ -50,11 +52,12 @@ $autores = $stmt->fetchAll(PDO::FETCH_ASSOC);
             <tbody>
                 <?php foreach ($autores as $autor) : ?>
                     <tr>
-                        <td><?php echo htmlspecialchars($autor['Nombre']); ?></td>
-                        <td>
+                        <td style="background-color: rgba(255, 255, 255, 0.4);"><?php echo htmlspecialchars($autor['Nombre']); ?></td>
+                        <td style="background-color: rgba(255, 255, 255, 0.4);">
                             <a href="edit_author.php?idAutor=<?php echo $autor['idAutor']; ?>" class="btn btn-warning btn-sm">Editar</a>
                             <a href="delete_author.php?idAutor=<?php echo $autor['idAutor']; ?>" class="btn btn-danger btn-sm" onclick="return confirm('¿Estás seguro de que quieres eliminar este autor y todos sus libros?');">Eliminar</a>
                         </td>
+
                     </tr>
                 <?php endforeach; ?>
             </tbody>

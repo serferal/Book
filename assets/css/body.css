@@ -1,0 +1,34 @@
+body{
+    background-image: radial-gradient(circle at 75% 26%, rgba(116, 116, 116,0.04) 0%, rgba(116, 116, 116,0.04) 50%,rgba(222, 222, 222,0.04) 50%, rgba(222, 222, 222,0.04) 100%),radial-gradient(circle at 62% 63%, rgba(60, 60, 60,0.04) 0%, rgba(60, 60, 60,0.04) 50%,rgba(152, 152, 152,0.04) 50%, rgba(152, 152, 152,0.04) 100%),radial-gradient(circle at 80% 64%, rgba(108, 108, 108,0.04) 0%, rgba(108, 108, 108,0.04) 50%,rgba(252, 252, 252,0.04) 50%, rgba(252, 252, 252,0.04) 100%),radial-gradient(circle at 97% 83%, rgba(184, 184, 184,0.04) 0%, rgba(184, 184, 184,0.04) 50%,rgba(137, 137, 137,0.04) 50%, rgba(137, 137, 137,0.04) 100%),radial-gradient(circle at 60% 7%, rgba(69, 69, 69,0.04) 0%, rgba(69, 69, 69,0.04) 50%,rgba(211, 211, 211,0.04) 50%, rgba(211, 211, 211,0.04) 100%),linear-gradient(90deg, rgb(212, 245, 239),rgb(253, 123, 174));
+}
+
+/* Estilo por defecto para .form-control */
+.form-control {
+    display: block;
+    width: 90%; /* Ancho predeterminado para dispositivos móviles */
+    height: calc(1.5em + .75rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+
+
+/* Media query para computadoras de escritorio y dispositivos con resolución similar */
+@media (min-width: 992px) {
+    .form-control {
+        width: 35%; /* Ancho para computadoras de escritorio */
+    }
+}
+
+img {
+    max-width: 24px; /* Ancho máximo  píxeles */
+    max-height: 24px; /* Altura máxima  píxeles */
+  }
